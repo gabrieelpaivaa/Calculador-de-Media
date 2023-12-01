@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qual a minha média?</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
+        body{
+            background-color: rgb(204, 9, 9);
+        }
+        h1{ font-family: 'Nova Square', sans-serif;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            line-height: 200px;
+            font-size: 35px;
+            margin-top: 100px;
+            
+        }
+    </style>
+</head>
+<body> 
+    <h1> 
+       <strong>   
+    <script>
+        
+        var nome = prompt('Qual é seu nome?')
+        var atividades = Number.parseFloat(prompt('Você possui quantas atividades?(digite em numeral)'))
+        var provas = Number.parseFloat(prompt('Você possui quantas provas? (digite em formato numeral)'))
+        var resa = Number.parseFloat(prompt('Qual o resultado da soma das notas de suas atividades? (digite em formato numeral)'))
+        var resp = Number.parseFloat(prompt('Qual o resultado da soma das notas de suas provas? (digite em numeral)'))
+        var ma = Number.parseFloat(prompt('Qual a média para a aprovação?'))
+        var r1 = atividades + provas
+        var r2 = resa + resp
+        var média = r2/r1
+        var res = média >=ma ? `Parabéns! Você foi aprovado! Sua média é ${média.toFixed(2)}!`: `Infelizmente você foi reprovado. <br> Pois a média para a sua aprovação é ${ma}. Já a média obtida por você foi de ${média.toFixed(2)}. `
+         
+            document.write(`Olá ${nome}! ${res}`)
+    </script> </strong>
+    </h1>
+</body>
+
+</html>
